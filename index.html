@@ -43,6 +43,7 @@
         <li><a href="#home" class="nav-link active">Home</a></li>
         <li><a href="pages/about.html" class="nav-link">About Us</a></li>
         <li><a href="pages/academics.html" class="nav-link">Academics</a></li>
+        <li><a href="#departments" class="nav-link">Departments</a></li>
         <li><a href="pages/placements.html" class="nav-link">Placements</a></li>
         <li><a href="#achievements" class="nav-link">Achievements</a></li>
         <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
@@ -99,51 +100,166 @@
             </div>
           </div>
         </div>
-        <div>
-          <img src="assets/images/vcet image.png" alt="VCET Campus" style="width: 100%; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);">
-        </div>\n      </div>\n    </div>\n  </section>\n\n  <!-- ACADEMICS SECTION -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ACADEMICS SECTION -->
   <section id="academics" style="background: var(--neutral-100);">
     <div class="container">
       <div class="section-title">
         <h2>Academic Programs</h2>
+        <p>VCET offers AICTE-approved undergraduate courses that match the college’s current intake and curriculum.</p>
       </div>
-      <div class="grid grid-3">
-        <div class="card">
+      <div class="course-tabs">
+        <div class="tab-list">
+          <button class="tab course-tab active" data-tab="csds">B.E. CSE (Data Science)</button>
+          <button class="tab course-tab" data-tab="it">B.E. Information Technology</button>
+          <button class="tab course-tab" data-tab="aids">B.E. AI & Data Science</button>
+          <button class="tab course-tab" data-tab="mech">B.E. Mechanical Engineering</button>
+          <button class="tab course-tab" data-tab="extc">B.E. EXTC</button>
+          <button class="tab course-tab" data-tab="civil">B.E. Civil Engineering</button>
+        </div>
+        <div class="tab-panels">
+          <div class="tab-panel active" id="csds">
+            <h3>B.E. Computer Science & Engineering (Data Science)</h3>
+            <p><strong>Duration:</strong> 4 Years | <strong>Seats:</strong> 180</p>
+            <p>This flagship course trains students in data analytics, machine learning, artificial intelligence, and modern computing tools used by industry today.</p>
+            <ul>
+              <li>Data Science & Analytics</li>
+              <li>Machine Learning, AI and Deep Learning</li>
+              <li>Big Data Technologies and Visualization</li>
+              <li>Industry-oriented projects and research labs</li>
+            </ul>
+          </div>
+          <div class="tab-panel" id="it">
+            <h3>B.E. Information Technology</h3>
+            <p><strong>Duration:</strong> 4 Years | <strong>Seats:</strong> 60</p>
+            <p>This program focuses on software development, network engineering, database management, and practical IT systems for modern enterprises.</p>
+            <ul>
+              <li>Software engineering and application development</li>
+              <li>Networking, cybersecurity and cloud-ready skills</li>
+              <li>Database systems and web technologies</li>
+              <li>Practical labs, internships and industry exposure</li>
+            </ul>
+          </div>
+          <div class="tab-panel" id="aids">
+            <h3>B.E. Artificial Intelligence & Data Science</h3>
+            <p><strong>Duration:</strong> 4 Years | <strong>Seats:</strong> 120</p>
+            <p>A cutting-edge program centered on AI, analytics, smart systems, and research-based learning to prepare students for the digital future.</p>
+            <ul>
+              <li>AI and Deep Learning techniques</li>
+              <li>Data-driven decision making and predictive modelling</li>
+              <li>Outcome-based learning and innovation projects</li>
+              <li>Industry mentorship and IPR awareness</li>
+            </ul>
+          </div>
+          <div class="tab-panel" id="mech">
+            <h3>B.E. Mechanical Engineering</h3>
+            <p><strong>Duration:</strong> 4 Years | <strong>Seats:</strong> 60</p>
+            <p>The mechanical program provides hands-on training in design, manufacturing, thermal engineering, and renewable energy systems.</p>
+            <ul>
+              <li>Design and CAD/CAM engineering</li>
+              <li>Thermal systems and energy management</li>
+              <li>Formula car, quad bike and robotics projects</li>
+              <li>Industry internships and technical competitions</li>
+            </ul>
+          </div>
+          <div class="tab-panel" id="extc">
+            <h3>B.E. Electronics & Telecommunication Engineering</h3>
+            <p><strong>Duration:</strong> 4 Years | <strong>Seats:</strong> 60</p>
+            <p>This course equips students in communication systems, digital signal processing, embedded systems, and electronics lab practice.</p>
+            <ul>
+              <li>Communications and RF engineering</li>
+              <li>Embedded systems and IoT applications</li>
+              <li>Signal processing and microelectronics</li>
+              <li>Industry collaboration with TI labs and IEEE chapters</li>
+            </ul>
+          </div>
+          <div class="tab-panel" id="civil">
+            <h3>B.E. Civil Engineering</h3>
+            <p><strong>Duration:</strong> 4 Years | <strong>Seats:</strong> 60</p>
+            <p>The civil engineering program focuses on structural design, construction technology, surveying, and sustainable infrastructure development.</p>
+            <ul>
+              <li>Structural engineering fundamentals</li>
+              <li>Construction materials and project management</li>
+              <li>Surveying, hydraulics, and geotechnical labs</li>
+              <li>Industry-focused sessions and practical training</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPARTMENTS SECTION -->
+  <section id="departments">
+    <div class="container">
+      <div class="section-title">
+        <h2>Departments</h2>
+        <p>Click a department card to view official VCET department details.</p>
+      </div>
+      <div class="grid grid-3 department-grid">
+        <div class="card department-card" data-department="computer">
           <div class="card-icon">💻</div>
-          <div class="card-title">B.E. Computer Science</div>
-          <p class="card-text">4-year undergraduate program focusing on modern computing technologies, software development, and emerging domains like AI and cloud computing.</p>
-          <a href="#" class="text-primary" style="font-weight: 600; margin-top: var(--spacing-md); display: inline-block;">Learn More →</a>
+          <h3>Computer Engineering</h3>
+          <p>Established 1999, NBA accredited with 180 seats. Focuses on programming, AI, ML, networking, and student-led coding clubs.</p>
         </div>
-        <div class="card">
+        <div class="card department-card" data-department="csds">
+          <div class="card-icon">📈</div>
+          <h3>Computer Science & Engineering (Data Science)</h3>
+          <p>Started 2019 with 180 seats, training students in data analytics, machine learning, big data tools, and statistical modeling.</p>
+        </div>
+        <div class="card department-card" data-department="it">
+          <div class="card-icon">🌐</div>
+          <h3>Information Technology</h3>
+          <p>Established 2000 with 60 seats, using modern IT labs and software to build practical skills in networking, databases, and web systems.</p>
+        </div>
+        <div class="card department-card" data-department="ai">
+          <div class="card-icon">🤖</div>
+          <h3>Artificial Intelligence & Data Science</h3>
+          <p>Launched 2020 with 120 seats, this program focuses on AI, data analytics, research, and outcome-based learning.</p>
+        </div>
+        <div class="card department-card" data-department="mechanical">
           <div class="card-icon">⚙️</div>
-          <div class="card-title">B.E. Mechanical Engineering</div>
-          <p class="card-text">4-year program covering thermal systems, manufacturing, CAD/CAM, and industrial applications with hands-on laboratory experience.</p>
-          <a href="#" class="text-primary" style="font-weight: 600; margin-top: var(--spacing-md); display: inline-block;">Learn More →</a>
+          <h3>Mechanical Engineering</h3>
+          <p>Established 1994 with 60 seats. Covers thermal sciences, manufacturing, CAD/CAM, renewable energy, and student engineering competitions.</p>
         </div>
-        <div class="card">
-          <div class="card-icon">⚡</div>
-          <div class="card-title">B.E. Electronics & Telecom</div>
-          <p class="card-text">Specialized program in electronics, communication systems, microprocessors, and digital signal processing with industry partnerships.</p>
-          <a href="#" class="text-primary" style="font-weight: 600; margin-top: var(--spacing-md); display: inline-block;">Learn More →</a>
+        <div class="card department-card" data-department="electronics">
+          <div class="card-icon">📡</div>
+          <h3>Electronics & Telecommunication Engineering</h3>
+          <p>Established 1994 with 60 seats. Emphasizes communication systems, DSP, embedded design, and industry-linked TI labs.</p>
         </div>
-        <div class="card">
-          <div class="card-icon">🔬</div>
-          <div class="card-title">B.E. Instrumentation</div>
-          <p class="card-text">Comprehensive program covering process instrumentation, control systems, and biomedical applications with advanced laboratories.</p>
-          <a href="#" class="text-primary" style="font-weight: 600; margin-top: var(--spacing-md); display: inline-block;">Learn More →</a>
+        <div class="card department-card" data-department="civil">
+          <div class="card-icon">🏗️</div>
+          <h3>Civil Engineering</h3>
+          <p>Established 2013 with 60 seats, focusing on industry collaboration, project showcases, and robust professional skill development.</p>
         </div>
-        <div class="card">
-          <div class="card-icon">📊</div>
-          <div class="card-title">M.E. Programs</div>
-          <p class="card-text">2-year postgraduate programs offering specialization in various engineering disciplines with research opportunities.</p>
-          <a href="#" class="text-primary" style="font-weight: 600; margin-top: var(--spacing-md); display: inline-block;">Learn More →</a>
+        <div class="card department-card" data-department="firstyear">
+          <div class="card-icon">🎓</div>
+          <h3>First Year Engineering</h3>
+          <p>Established 1994, this foundational department supports students across all branches with core science and engineering subjects.</p>
         </div>
-        <div class="card">
-          <div class="card-icon">💼</div>
-          <div class="card-title">MMS (MBA)</div>
-          <p class="card-text">2-year Master of Management Studies program preparing industry-ready management professionals.</p>
-          <a href="#" class="text-primary" style="font-weight: 600; margin-top: var(--spacing-md); display: inline-block;">Learn More →</a>
-        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACILITIES SECTION -->
+  <section id="facilities" style="background: white; padding: 4rem 0;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Labs & Centers</h2>
+        <p>Explore VCET’s key lab and innovation centers that support research, practical learning, and industry collaboration.</p>
+      </div>
+      <div class="grid grid-2 facility-grid">
+        <div class="facility-card">AICTE IDEA Lab</div>
+        <div class="facility-card">Center of Excellence</div>
+        <div class="facility-card">Machinery Diagnostics</div>
+        <div class="facility-card">Texas Instruments Innovation Lab</div>
+        <div class="facility-card">Robotics</div>
+        <div class="facility-card">Siemens</div>
+        <div class="facility-card">Oracle Academy</div>
+        <div class="facility-card">e-Yantra</div>
       </div>
     </div>
   </section>
@@ -345,7 +461,7 @@
               <p style="margin: 0; font-size: var(--text-sm); color: var(--secondary);">General Manager Marketing</p>
             </div>
           </div>
-          <p style="margin: 0;">"The journey at VCET as part of the Instrumentation course was truly enriching. It laid a strong foundation for our all-round development as professionals with exposure to diverse specializations."</p>
+          <p style="margin: 0;">"The journey at VCET was truly enriching. It laid a strong foundation for our all-round development as professionals with exposure to diverse engineering disciplines."</p>
         </div>
       </div>
     </div>
@@ -410,8 +526,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Vidyavardhini's College of Engineering & Technology. All Rights Reserved.</p>
-      <p style="font-size: var(--text-sm); margin-top: var(--spacing-sm);">Designed with ❤️ for Excellence in Education</p>
+      <p style="color:white">&copy; 2026 Vidyavardhini's College of Engineering & Technology. All Rights Reserved.</p>
+      <p style="font-size: var(--text-sm); margin-top: var(--spacing-sm);color:white">Designed for Excellence in Education</p>
     </div>
   </footer>
 

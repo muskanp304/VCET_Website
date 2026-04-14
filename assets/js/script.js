@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initializeScrollAnimations();
   initializeCountUp();
   initializeMobileMenu();
+  initializeCourseTabs();
 });
 
 /* ============================================
@@ -29,6 +30,118 @@ function initializeNavigation() {
     });
   });
 }
+const departmentInfo = {
+  computer: {
+    title: 'B.E. Computer Engineering',
+    link: 'https://vcet.edu.in/computer-engineering/',
+    html: `<p>Established in 1999, the Department of Computer Engineering offers a 4-year B.E. program with an intake of 180 seats. The department is NBA accredited and permanently affiliated with the University of Mumbai. It emphasizes programming, database management, operating systems, web development, networking, artificial intelligence, machine learning, and deep learning.</p>
+      <ul>
+        <li>180-seat undergraduate program</li>
+        <li>NBA accredited from 2012–2015 and reaccredited through 2025</li>
+        <li>Strong focus on AI, ML, and cutting-edge software development</li>
+        <li>Student chapters including CSI, CodeChef, and Microsoft Learn Students Club</li>
+        <li>Industry exposure through internships, MoUs, and e-Yantra Robotics collaboration</li>
+        <li>Research, IPR, newsletters, and student innovation activities</li>
+      </ul>
+      <p><a href="https://vcet.edu.in/computer-engineering/" target="_blank" rel="noopener" class="text-primary">View official VCET Computer Engineering page →</a></p>`
+  },
+  csds: {
+    title: 'B.E. Computer Science & Engineering (Data Science)',
+    link: 'https://vcet.edu.in/computer-science-and-engineering-data-science/',
+    html: `<p>Started in 2019, the CSE-DS department offers a 4-year B.E. program with 180 seats. It focuses on transforming raw structured and unstructured data into meaningful insights using programming, analytics, and statistical modeling.</p>
+      <ul>
+        <li>180-seat program in Data Science</li>
+        <li>Training in machine learning, big data, and data visualization</li>
+        <li>Focus on data intuition, statistics, and programming skills</li>
+        <li>Prepares students for roles such as Data Scientist, Data Analyst, and Data Engineer</li>
+        <li>Emphasizes analytics tools, Python, R, Hadoop, and Spark</li>
+        <li>Strong industry relevance and data-driven career preparation</li>
+      </ul>
+      <p><a href="https://vcet.edu.in/computer-science-and-engineering-data-science/" target="_blank" rel="noopener" class="text-primary">View official VCET CSE-DS page →</a></p>`
+  },
+  it: {
+    title: 'B.E. Information Technology',
+    link: 'https://vcet.edu.in/information-technology/',
+    html: `<p>Established in 2000, the Department of Information Technology offers a 4-year B.E. program with 60 seats. It is NBA accredited from July 2022 to June 2025 and affiliated to the University of Mumbai.</p>
+      <ul>
+        <li>60-seat IT program</li>
+        <li>Modern labs with high-speed internet, Wi-Fi, and licensed software</li>
+        <li>Strong emphasis on software development, networking, and practical IT applications</li>
+        <li>Focus on personality development through extra-curricular activities</li>
+        <li>Experienced faculty with industry-institution interaction</li>
+        <li>Prepares students for competitive IT roles and placement success</li>
+      </ul>
+      <p><a href="https://vcet.edu.in/information-technology/" target="_blank" rel="noopener" class="text-primary">View official VCET IT page →</a></p>`
+  },
+  ai: {
+    title: 'B.E. Artificial Intelligence & Data Science',
+    link: 'https://vcet.edu.in/artificial-intelligence-and-data-science/',
+    html: `<p>Launched in 2020, the AI & DS department offers a 4-year B.E. program with 120 seats. It focuses on building skilled AI and data science professionals through modern pedagogy and research-centred learning.</p>
+      <ul>
+        <li>120-seat AI & DS program</li>
+        <li>State-of-the-art software and modern teaching-learning facilities</li>
+        <li>Emphasis on research, IPR, copyrights, and patents</li>
+        <li>Outcome-based education and strong co-curricular support</li>
+        <li>Student-driven activities, workshops, and chapter events</li>
+        <li>Prepares graduates for AI and analytics careers in industry and research</li>
+      </ul>
+      <p><a href="https://vcet.edu.in/artificial-intelligence-and-data-science/" target="_blank" rel="noopener" class="text-primary">View official VCET AI & DS page →</a></p>`
+  },
+  mechanical: {
+    title: 'B.E. Mechanical Engineering',
+    link: 'https://vcet.edu.in/mechanical-engineering/',
+    html: `<p>Established in 1994, the Mechanical Engineering department offers a 4-year B.E. program with 60 seats. It is NBA accredited and permanently affiliated with the University of Mumbai.</p>
+      <ul>
+        <li>60-seat mechanical program</li>
+        <li>Strong labs and infrastructure with modern software tools</li>
+        <li>Focus on design, thermal sciences, manufacturing, and renewable energy</li>
+        <li>Hands-on projects like Formula Car, Quad Bike, Solar Car, and Aero design</li>
+        <li>Active student chapters such as SAE, ISHRAE, and VMEA</li>
+        <li>Industry internships, expert lectures, seminars, and consultancy support</li>
+      </ul>
+      <p><a href="https://vcet.edu.in/mechanical-engineering/" target="_blank" rel="noopener" class="text-primary">View official VCET Mechanical page →</a></p>`
+  },
+  electronics: {
+    title: 'B.E. Electronics & Telecommunication Engineering',
+    link: 'https://vcet.edu.in/electronics-and-telecommunication-engineering/',
+    html: `<p>Established in 1994, the Electronics and Telecommunication Engineering department offers a 4-year B.E. program with 60 seats. It is NBA accredited and permanently affiliated to the University of Mumbai.</p>
+      <ul>
+        <li>60-seat EXTC program</li>
+        <li>Focus on communication systems, digital signal processing, and embedded systems</li>
+        <li>Texas Instruments supported labs and advanced electronics facilities</li>
+        <li>Active IEEE and IETE student chapters for technical engagement</li>
+        <li>Industry internships, projects, and regular industrial visits</li>
+        <li>Strong placement support with national and international recruiters</li>
+      </ul>
+      <p><a href="https://vcet.edu.in/electronics-and-telecommunication-engineering/" target="_blank" rel="noopener" class="text-primary">View official VCET EXTC page →</a></p>`
+  },
+  civil: {
+    title: 'B.E. Civil Engineering',
+    link: 'https://vcet.edu.in/civil-engineering/',
+    html: `<p>Established in 2013, the Civil Engineering department offers a 4-year B.E. program with 60 seats. It is designed to develop professional civil engineers with strong technical knowledge and industry skills.</p>
+      <ul>
+        <li>60-seat civil engineering program</li>
+        <li>Industry collaborations, project showcases and VNPS participation</li>
+        <li>Focus on technical, professional, and leadership skills</li>
+        <li>Encourages participation in co-curricular and extra-curricular events</li>
+        <li>Strong faculty guidance and practical learning opportunities</li>
+      </ul>
+      <p><a href="https://vcet.edu.in/civil-engineering/" target="_blank" rel="noopener" class="text-primary">View official VCET Civil page →</a></p>`
+  },
+  firstyear: {
+    title: 'First Year Engineering',
+    link: 'https://vcet.edu.in/first-year-engineering/',
+    html: `<p>Established in 1994, the First Year Engineering department offers foundational training in Engineering Physics, Chemistry, Mathematics, and Professional Communication. It supports students across all VCET engineering branches.</p>
+      <ul>
+        <li>Core foundation for all branches including CSE-DS, IT, AI&DS, Mechanical, EXTC and Civil</li>
+        <li>Mentoring and induction programs for new students</li>
+        <li>State-of-the-art labs, workshops, and faculty support</li>
+        <li>Focus on holistic student development and academic transition</li>
+        <li>Programs include engineering basics, ethics, communication, and mathematics</li>
+      </ul>
+      <p><a href="https://vcet.edu.in/first-year-engineering/" target="_blank" rel="noopener" class="text-primary">View official VCET First Year page →</a></p>`
+  }
+};
 
 /* ============================================
    MOBILE MENU
@@ -51,6 +164,22 @@ function initializeMobileMenu() {
       });
     });
   }
+}
+
+function initializeCourseTabs() {
+  const tabs = document.querySelectorAll('.course-tab');
+  const panels = document.querySelectorAll('.tab-panel');
+
+  if (tabs.length === 0 || panels.length === 0) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetId = tab.dataset.tab;
+
+      tabs.forEach(btn => btn.classList.toggle('active', btn === tab));
+      panels.forEach(panel => panel.classList.toggle('active', panel.id === targetId));
+    });
+  });
 }
 
 /* ============================================
